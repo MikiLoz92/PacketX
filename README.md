@@ -5,10 +5,25 @@ PacketX is a set of ReactiveX extensions for dealing with packet-based communica
 With PacketX you can:
  * Set up listeners for your incoming packets
  * Make requests and obtain the responses as Observables, Singles or Completables
- 
+
 ## Usage
 
-Using this library is rather easy:
+To include this project in your codebase just put JitPack's repository on your `build.gradle` file:
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+and then add the dependency:
+```gradle
+dependencies {
+    implementation 'com.github.MikiLoz92:PacketX:0.1.0'
+}
+```
+Using the library is rather easy:
 
 ### 1. Implement `PacketCourier<T>`
 
