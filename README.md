@@ -37,7 +37,7 @@ On top of this, you will have to implement a `PacketListenersStore<T>` property 
 class CanController : PacketCourier<CanPacket> {
 
     // When initializing the controller later on this property will be initialized for you, so you can leave it as a lateinit for now.
-    override lateinit var packetListenersStore = null
+    override lateinit var packetListenersStore
     
     override fun transmitPacket(packet: CanPacket) {
         // Do your magic here: transmit this packet into the CAN line.
