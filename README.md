@@ -57,7 +57,7 @@ Now you just have to use the newly created `packetBasedController`:
 ```kotlin
 var request = CanPacket.PingPacket()
 packetBasedController.makeSinglePacketRequest<CanPacket.PongPacket>(request, timeout = 2000)
-        .subscribe {
-            println("PONG packet received!")
+        .subscribe { packet: CanPacket.PongPacket ->
+            println("PONG packet received: $packet")
         }
 ```
